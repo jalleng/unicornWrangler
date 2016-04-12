@@ -2,20 +2,29 @@
 
 Unicorn.all = [];
 
-function Unicorn(name, color, favoriteFood, location) {
-  this.name = name;
-  this.color = color;
-  this.favoriteFood = favoriteFood;
-  this.location = location;
-};
+function Unicorn(opts) {
+    Object.keys(opts).forEach(function(e, index, keys) {
+      this[e] = opts[e];
+    },this);
+  }
 
-Unicorn.toHtml = function(arr){
+Unicorn.toHtml = function(){
   $(".list").html("");
-
   Unicorn.all.forEach(function(el) {
-    Var unicorn = "<li> Name=" + el.name + "Color= " + el.color + "Favorite Food= " + el.favoriteFood + "</li>";
-
+    var unicorn = "<li> Name=" + el.name + "Color= " + el.color +
+                  "Favorite Food= " + el.favoriteFood + "</li>";
     $("#" + el.location +"List").append(unicorn);
-  };
+  });
 };
 
+Unicorn.fetch = function(){
+  $.getJSON("unicornData.json", function(data) {
+    data.forEach(function(unicorn) {
+      var unicorn = new Unicorn(unicorn);
+      Unicorn.all.push(unicorn);
+    });
+  })
+};
+
+Unicorn.fetch();
+Unicorn.toHtml();

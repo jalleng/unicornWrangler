@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Nacho",
+    "color": "Black",
+    "favoriteFood": "Cheese",
+    "location": "Corral"
+  },
+  {
+    "name": "Alice",
+    "color": "Orange and White",
+    "favoriteFood": "Tuna",
+    "location": "Barn"
+  },
+  {"name": "Tabitha",
+    "color": "White",
+    "favoriteFood": "Hay",
+    "location": "Pasture"
+  },
+  {"name": "Thor",
+    "color": "Black",
+    "favoriteFood": "Cheeseburgers",
+    "location": "Pasture"
+  },
+  {"name": "Tenacious",
+    "color": "Grey",
+    "favoriteFood": "Cake",
+    "location": "Barn"
+  },
+  {"name": "Tabitha",
+    "color": "Orange",
+    "favoriteFood": "Cannoli",
+    "location": "Corral"
+  }
+]
