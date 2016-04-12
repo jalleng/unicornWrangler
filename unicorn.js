@@ -9,22 +9,29 @@ function Unicorn(opts) {
   }
 
 Unicorn.toHtml = function(){
-  $(".list").html("");
+  //$(".list").html("");
+
   Unicorn.all.forEach(function(el) {
-    var unicorn = "<li> Name=" + el.name + "Color= " + el.color +
-                  "Favorite Food= " + el.favoriteFood + "</li>";
-    $("#" + el.location +"List").append(unicorn);
+    var unicorn = "<li> Name= " + el.name + ", Color= " + el.color +
+                  ", Favorite Food= " + el.favoriteFood + "</li>";
+    $("#" + el.location + "List").append(unicorn);
   });
 };
 
-Unicorn.fetch = function(){
+Unicorn.fetch = function(next){
   $.getJSON("unicornData.json", function(data) {
-    data.forEach(function(unicorn) {
-      var unicorn = new Unicorn(unicorn);
+    data.forEach(function(el) {
+      var unicorn = new Unicorn(el);
       Unicorn.all.push(unicorn);
     });
+    //next();
+
   })
+    .done(function(){
+      console.log('Done Again', Unicorn.all);
+      next();
+  });
 };
 
-Unicorn.fetch();
-Unicorn.toHtml();
+Unicorn.fetch(Unicorn.toHtml);
+// Unicorn.toHtml();

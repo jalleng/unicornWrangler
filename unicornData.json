@@ -3,32 +3,32 @@
     "name": "Nacho",
     "color": "Black",
     "favoriteFood": "Cheese",
-    "location": "Corral"
+    "location": "corral"
   },
   {
     "name": "Alice",
     "color": "Orange and White",
     "favoriteFood": "Tuna",
-    "location": "Barn"
+    "location": "barn"
   },
   {"name": "Tabitha",
     "color": "White",
     "favoriteFood": "Hay",
-    "location": "Pasture"
+    "location": "pasture"
   },
   {"name": "Thor",
     "color": "Black",
     "favoriteFood": "Cheeseburgers",
-    "location": "Pasture"
+    "location": "pasture"
   },
   {"name": "Tenacious",
     "color": "Grey",
     "favoriteFood": "Cake",
-    "location": "Barn"
+    "location": "barn"
   },
   {"name": "Tabitha",
     "color": "Orange",
     "favoriteFood": "Cannoli",
-    "location": "Corral"
+    "location": "corral"
   }
 ]
