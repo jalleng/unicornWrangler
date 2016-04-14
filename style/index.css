@@ -8,3 +8,6 @@ header {
   text-align: center;
   background-color: #60495A;
 }
+.list {
+border: 2px solid black;
+}
