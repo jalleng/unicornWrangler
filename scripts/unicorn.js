@@ -17,7 +17,7 @@
   };
 
   Unicorn.fetch = function(next){
-    $.getJSON("unicornData.json", function(data) {
+    $.getJSON("data/unicornData.json", function(data) {
       data.forEach(function(el) {
         var unicorn = new Unicorn(el);
         Unicorn.all.push(unicorn);
